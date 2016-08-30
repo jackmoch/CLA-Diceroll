@@ -26,6 +26,7 @@ describe('dice', () => {
     })
     it('should handle multiple rolls', () => {
       const string = '2d40'
+      assert.strictEqual(roll(string) % 1, 0)
       assert.isAbove(roll(string), 2)
       assert.isBelow(roll(string), 80)
     })
